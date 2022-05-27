@@ -1,0 +1,9 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:default="clr-namespace:Avalonia.Themes.Default;assembly=Avalonia.Themes.Default"
+             x:Class="LeakDemo.App">
+    <Application.Styles>
+        <!--<default:DefaultTheme />-->
+        <FluentTheme Mode="Light"/>
+    </Application.Styles>
+</Application>
