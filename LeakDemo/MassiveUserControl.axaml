@@ -4,13 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:leakDemo="clr-namespace:LeakDemo"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:DataType="leakDemo:MassiveUserControl"
+             x:DataType="leakDemo:BigDataContext"
              Background="Red"
              x:Class="LeakDemo.MassiveUserControl">
-    <TextBlock>Open context menu</TextBlock>
-    <UserControl.ContextFlyout>
-        <MenuFlyout>
-            <MenuItem Header="Binding" Command="{CompiledBinding SomeCommand}" />
-        </MenuFlyout>
-    </UserControl.ContextFlyout>
+    <StackPanel>
+        <Button>Click me</Button>
+    </StackPanel>
 </UserControl>

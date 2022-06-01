@@ -54,7 +54,10 @@ namespace LeakDemo
         private void Add_OnClick(object? sender, RoutedEventArgs e)
         {
             Panel panel = this.FindControl<Panel>("Panel");
-            panel.Children.Add(new MassiveUserControl());
+            panel.Children.Add(new MassiveUserControl()
+            {
+                DataContext = new BigDataContext()
+            });
         }
 
         private void Remove_OnClick(object? sender, RoutedEventArgs e)
