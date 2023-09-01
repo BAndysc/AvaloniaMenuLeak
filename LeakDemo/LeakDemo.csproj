@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <RestoreAdditionalProjectSources>
             https://nuget.avaloniaui.net/repository/avalonia-all/index.json
@@ -11,11 +11,11 @@
         <None Remove=".gitignore" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="0.10.999-cibuild0020870-beta" />
-        <PackageReference Include="Avalonia.Desktop" Version="0.10.999-cibuild0020870-beta" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="0.10.999-cibuild0020870-beta" />
+        <PackageReference Include="Avalonia" Version="11.0.4" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.4" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.4" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.999-cibuild0020870-beta" />
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.4" />
         <!--<PackageReference Include="HarfBuzzSharp" Version="2.8.2-preview.127" />
         <PackageReference Include="SkiaSharp" Version="2.88.0-preview.127" />-->
     </ItemGroup>

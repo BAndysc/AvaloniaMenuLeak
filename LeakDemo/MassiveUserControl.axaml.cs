@@ -4,11 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using JetBrains.Annotations;
 
 namespace LeakDemo
 {
-    public class MassiveUserControl : UserControl
+    public partial class MassiveUserControl : UserControl
     {
         public MassiveUserControl()
         {
@@ -46,7 +45,6 @@ namespace LeakDemo
         public event EventHandler? CanExecuteChanged;
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
